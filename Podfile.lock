@@ -1,0 +1,17 @@
+PODS:
+  - CryptoCurrencyKit (0.3.1)
+  - MarqueeLabel (3.1.4):
+    - MarqueeLabel/ObjC (= 3.1.4)
+  - MarqueeLabel/ObjC (3.1.4)
+
+DEPENDENCIES:
+  - CryptoCurrencyKit
+  - MarqueeLabel
+
+SPEC CHECKSUMS:
+  CryptoCurrencyKit: 5c78da2dfb845e2feddb519b56169ab39f117ca1
+  MarqueeLabel: bf768455fe88d427f71476ebb23f9092b660f40b
+
+PODFILE CHECKSUM: d6ed6b4cdaf20d328dc9e9dcbdcd6207db83a9f1
+
+COCOAPODS: 1.4.0

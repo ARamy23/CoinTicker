@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dxP-Cx-kDK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CourierNew.ttf">
+            <string>CourierNewPSMT</string>
+        </array>
+        <array key="CourierNewBold.ttf">
+            <string>CourierNewPS-BoldMT</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CurrentCurrencyCoinViewController" customModule="CoinTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitDarkBG" translatesAutoresizingMaskIntoConstraints="NO" id="wGZ-QX-zsx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="Epq-1m-36X">
+                                <rect key="frame" x="151" y="96" width="73" height="46"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Ticker Data... " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Leq-h9-Xx4" customClass="MarqueeLabel">
+                                <rect key="frame" x="16" y="551" width="343" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DvQ-rl-sdr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHo-H7-4KL">
+                                <rect key="frame" x="8" y="150" width="359" height="46"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wGZ-QX-zsx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="47O-JH-BBj"/>
+                            <constraint firstItem="wGZ-QX-zsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G8M-Nq-7Dh"/>
+                            <constraint firstItem="Epq-1m-36X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="HUa-ZK-HJw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PHo-H7-4KL" secondAttribute="trailing" constant="8" id="IRT-Kl-YPI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wGZ-QX-zsx" secondAttribute="bottom" id="QaQ-0C-IIY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Leq-h9-Xx4" secondAttribute="bottom" constant="16" id="RNi-dj-zM6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Leq-h9-Xx4" secondAttribute="trailing" constant="16" id="cHv-JH-U0f"/>
+                            <constraint firstItem="Epq-1m-36X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fTC-lC-eHF"/>
+                            <constraint firstItem="Leq-h9-Xx4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l4Q-e9-Eze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wGZ-QX-zsx" secondAttribute="trailing" id="qzS-R6-GAh"/>
+                            <constraint firstItem="PHo-H7-4KL" firstAttribute="top" secondItem="Epq-1m-36X" secondAttribute="bottom" constant="8" id="w77-ff-YKs"/>
+                            <constraint firstItem="PHo-H7-4KL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="yqT-rt-gAZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="Nud-YP-846">
+                        <barButtonItem key="rightBarButtonItem" title="Switch Currencies" image="switch" id="aba-uD-DlR">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="switchBtnPressed:" destination="BYZ-38-t0r" id="ypc-pb-ORD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentCoinNameLabel" destination="PHo-H7-4KL" id="3K4-Dy-ePU"/>
+                        <outlet property="currentCoinPriceLabel" destination="Leq-h9-Xx4" id="3QM-5C-LZk"/>
+                        <outlet property="currentCurrencyLabel" destination="Epq-1m-36X" id="SNx-3d-dRB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="30.134932533733135"/>
+        </scene>
+        <!--Change Currency Coin View Controller-->
+        <scene sceneID="QqB-S2-Zqt">
+            <objects>
+                <viewController storyboardIdentifier="ChangeCurrencyCoinViewController" id="prA-DP-s68" customClass="ChangeCurrencyCoinViewController" customModule="CoinTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dkY-Jq-yK1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currenciesBG" translatesAutoresizingMaskIntoConstraints="NO" id="v0P-83-DLe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFG-og-HEz">
+                                <rect key="frame" x="0.0" y="506" width="375" height="161"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.36646511130136988" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can change the currency as well as the coin here !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUu-Gl-mLG" customClass="MarqueeLabel">
+                                <rect key="frame" x="8" y="28" width="359" height="142"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.56498822773972601" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="MC2-gQ-XXF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acK-IE-KM9">
+                                <rect key="frame" x="32" y="282" width="311" height="103.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="Fetch The Data !">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchDataBtnPressed:" destination="prA-DP-s68" eventType="touchUpInside" id="Pes-aG-XIO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v0P-83-DLe" firstAttribute="leading" secondItem="gfP-9n-ay0" secondAttribute="leading" id="1m3-vY-LYZ"/>
+                            <constraint firstItem="gfP-9n-ay0" firstAttribute="trailing" secondItem="acK-IE-KM9" secondAttribute="trailing" constant="32" id="3kG-Dj-4zD"/>
+                            <constraint firstItem="acK-IE-KM9" firstAttribute="centerX" secondItem="dkY-Jq-yK1" secondAttribute="centerX" id="9qw-Am-taB"/>
+                            <constraint firstItem="acK-IE-KM9" firstAttribute="leading" secondItem="gfP-9n-ay0" secondAttribute="leading" constant="32" id="AAN-mj-f1O"/>
+                            <constraint firstItem="acK-IE-KM9" firstAttribute="centerY" secondItem="dkY-Jq-yK1" secondAttribute="centerY" id="Jcs-bn-3zs"/>
+                            <constraint firstItem="gfP-9n-ay0" firstAttribute="trailing" secondItem="QUu-Gl-mLG" secondAttribute="trailing" constant="8" id="NvU-OF-urn"/>
+                            <constraint firstItem="GFG-og-HEz" firstAttribute="bottom" secondItem="gfP-9n-ay0" secondAttribute="bottom" id="O5n-sB-2rc"/>
+                            <constraint firstItem="gfP-9n-ay0" firstAttribute="bottom" secondItem="v0P-83-DLe" secondAttribute="bottom" id="ZAX-EV-DKG"/>
+                            <constraint firstItem="QUu-Gl-mLG" firstAttribute="top" secondItem="gfP-9n-ay0" secondAttribute="top" constant="8" id="a35-LU-s0o"/>
+                            <constraint firstItem="gfP-9n-ay0" firstAttribute="trailing" secondItem="v0P-83-DLe" secondAttribute="trailing" id="cF6-wJ-6rk"/>
+                            <constraint firstItem="GFG-og-HEz" firstAttribute="trailing" secondItem="gfP-9n-ay0" secondAttribute="trailing" id="lKZ-uk-H00"/>
+                            <constraint firstItem="GFG-og-HEz" firstAttribute="top" secondItem="acK-IE-KM9" secondAttribute="bottom" constant="120" id="lZx-qr-Tqc"/>
+                            <constraint firstItem="GFG-og-HEz" firstAttribute="top" secondItem="acK-IE-KM9" secondAttribute="bottom" constant="120.5" id="nWW-Gu-Pid"/>
+                            <constraint firstItem="GFG-og-HEz" firstAttribute="height" secondItem="v0P-83-DLe" secondAttribute="height" multiplier="1:4" id="pJ0-RP-xX6"/>
+                            <constraint firstItem="acK-IE-KM9" firstAttribute="top" secondItem="QUu-Gl-mLG" secondAttribute="bottom" constant="112" id="qqF-0h-55G"/>
+                            <constraint firstItem="QUu-Gl-mLG" firstAttribute="leading" secondItem="gfP-9n-ay0" secondAttribute="leading" constant="8" id="s3S-bs-RUF"/>
+                            <constraint firstItem="v0P-83-DLe" firstAttribute="top" secondItem="gfP-9n-ay0" secondAttribute="top" id="wCd-6x-TyO"/>
+                            <constraint firstItem="GFG-og-HEz" firstAttribute="leading" secondItem="gfP-9n-ay0" secondAttribute="leading" id="zO8-iH-y1k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gfP-9n-ay0"/>
+                    </view>
+                    <connections>
+                        <outlet property="currencyCoinPickerView" destination="GFG-og-HEz" id="Uuc-a9-q9N"/>
+                        <outlet property="fetchDataBtn" destination="acK-IE-KM9" id="rU7-Hv-DEX"/>
+                        <outlet property="hintLabel" destination="QUu-Gl-mLG" id="XNv-lQ-kKz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XuX-96-uNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.5999999999999" y="28.335832083958024"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="A2P-44-Gdn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dxP-Cx-kDK" customClass="NavigationViewController" customModule="CoinTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uHZ-vg-bDd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.00096072153582704581" green="0.035114534157439245" blue="0.209946892561929" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="M1e-Uf-OMd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gI7-RT-MY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bitDarkBG" width="2000" height="2000"/>
+        <image name="currenciesBG" width="833" height="833"/>
+        <image name="switch" width="64" height="64"/>
+    </resources>
+</document>
